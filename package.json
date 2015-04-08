@@ -1,0 +1,28 @@
+{
+  "name": "ip",
+  "version": "0.0.3",
+  "description": "Thin command-line interface for Raspberry Pi low level configration.",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pirateship": "cli.js"
+  },
+  "dependencies": {
+        "commander": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pirate-sh/ip.git"
+  },
+  "keywords": [
+    "raspberry"
+  ],
+  "author": "Stefan Unterhauser",
+  "license": "AGPL3",
+  "bugs": {
+    "url": "https://github.com/pirate-sh/ip/issues"
+  },
+  "homepage": "https://github.com/pirate-sh/ip"
+}
