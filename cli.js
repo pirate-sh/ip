@@ -22,4 +22,11 @@ program
   .description('reboots system')
   .action(reboot)
 
+var hostname = require('./lib/ReconfigureHostname.js')
+
+program
+  .command('rename <hostname>')
+  .description('changes Hostname')
+  .action(hostname)
+
 program.parse(process.argv);
