@@ -29,4 +29,25 @@ program
   .description('changes Hostname')
   .action(hostname)
 
+var adapter = require('./lib/ReconfigureNetwork.js')
+
+program
+  .command('adapter <wirelessSSID> <password> <wirelessSecurityType>')
+  .description('connects a adapter to a wifi network')
+  .action(hostname)
+
+var adapter = require('./lib/ReconfigureNetwork.js')
+
+program
+  .command('adapter <wirelessSSID> <password> <wirelessSecurityType>')
+  .description('connects a adapter to a wifi network')
+  .action(adapter)
+
+var detectrpi = require('./lib/DetectRPI.js')
+
+program
+  .command('detectrpi [-v]')
+  .description('detects the hardware version of a raspberry pi')
+  .action(detectrpi)
+
 program.parse(process.argv);
