@@ -34,13 +34,6 @@ var adapter = require('./lib/ReconfigureNetwork.js')
 program
   .command('adapter <wirelessSSID> <password> <wirelessSecurityType>')
   .description('connects a adapter to a wifi network')
-  .action(hostname)
-
-var adapter = require('./lib/ReconfigureNetwork.js')
-
-program
-  .command('adapter <wirelessSSID> <password> <wirelessSecurityType>')
-  .description('connects a adapter to a wifi network')
   .action(adapter)
 
 var detectrpi = require('./lib/DetectRPI.js')
@@ -49,5 +42,12 @@ program
   .command('detectrpi [-v]')
   .description('detects the hardware version of a raspberry pi')
   .action(detectrpi)
+
+var detectwifi = require('./lib/DetectWifi.js')
+
+program
+  .command('detectwifi [-v]')
+  .description('detect chipset of USB-Wifi dongle')
+  .action(detectwifi)
 
 program.parse(process.argv);

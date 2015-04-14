@@ -1,6 +1,6 @@
 {
-  "name": "ip",
-  "version": "0.0.3",
+  "name": "pirate-sh",
+  "version": "0.0.5",
   "description": "Thin command-line interface for Raspberry Pi low level configration.",
   "main": "cli.js",
   "scripts": {
@@ -10,14 +10,15 @@
     "pirateship": "cli.js"
   },
   "dependencies": {
-        "commander": "^2.3.0"
+        "commander": "^2.3.0",
+        "underscore": "^1.8.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/pirate-sh/ip.git"
   },
   "keywords": [
-    "raspberry"
+    "raspberry pi"
   ],
   "author": "Stefan Unterhauser",
   "license": "AGPL3",
