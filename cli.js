@@ -6,7 +6,7 @@ var fs = require('fs')
 var exec = require('child_process').exec
 
 
-//console.log(process.argv)
+console.log(process.argv)
 
 var def = require('./lib/Default.js')
 
@@ -35,6 +35,13 @@ program
   .command('adapter <wirelessSSID> <password> <wirelessSecurityType>')
   .description('connects a adapter to a wifi network')
   .action(adapter)
+
+var eth0 = require('./lib/Eth0.js')
+
+program
+  .command('eth0 <ip> <mask> <gateway> <dns>')
+  .description('configures rpi network interface to a static ip address')
+  .action(eth0)
 
 var detectrpi = require('./lib/DetectRPI.js')
 
