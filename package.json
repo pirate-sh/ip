@@ -1,6 +1,6 @@
 {
   "name": "pirate-sh",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Thin command-line interface for Raspberry Pi low level configration.",
   "main": "cli.js",
   "scripts": {
