@@ -6,7 +6,7 @@ var fs = require('fs')
 var exec = require('child_process').exec
 
 
-console.log(process.argv)
+//console.log(process.argv)
 
 var def = require('./lib/Default.js')
 
