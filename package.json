@@ -1,6 +1,6 @@
 {
   "name": "pirate-sh",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Thin command-line interface for Raspberry Pi low level configration.",
   "main": "cli.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/pirate-sh/ip.git"
   },
   "keywords": [
-    "raspberry pi"
+    "raspberry pi ethernet wifi"
   ],
   "author": "Stefan Unterhauser",
   "license": "AGPL3",
