@@ -39,14 +39,14 @@ program
 var detectrpi = require('./lib/DetectRPI.js')
 
 program
-  .command('detectrpi [-v]')
+  .command('detectrpi')
   .description('detects the hardware version of a raspberry pi')
   .action(detectrpi)
 
 var detectwifi = require('./lib/DetectWifi.js')
 
 program
-  .command('detectwifi [-v]')
+  .command('detectwifi')
   .description('detect chipset of USB-Wifi dongle')
   .action(detectwifi)
 
