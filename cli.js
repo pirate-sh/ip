@@ -15,13 +15,6 @@ program
   .description('sets a raspbian back to default configuration')
   .action(def)
 
-var reboot = require('./lib/Reboot.js')
-
-program
-  .command('reboot')
-  .description('reboots system')
-  .action(reboot)
-
 var hostname = require('./lib/ReconfigureHostname.js')
 
 program
