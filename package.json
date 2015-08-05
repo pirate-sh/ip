@@ -1,7 +1,7 @@
 {
   "name": "pirate-sh",
   "version": "0.0.9",
-  "description": "Thin command-line interface for Raspberry Pi low level configration.",
+  "description": "Thin command-line interface for Raspberry Pi low level configuration.",
   "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,10 +20,15 @@
   "keywords": [
     "raspberry pi ethernet wifi"
   ],
-  "author": "Stefan Unterhauser",
-  "license": "AGPL3",
+  "author": {
+    "name": "Stefan Unterhauser",
+    "email": "stefan@unterhauser.name",
+    "url": "http://pirate.sh/ip"
+  },
+  "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/pirate-sh/ip/issues"
+    "url": "https://github.com/pirate-sh/ip/issues",
+    "email": "stefan@unterhauser.name"
   },
   "homepage": "https://github.com/pirate-sh/ip"
 }
