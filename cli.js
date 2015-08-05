@@ -29,12 +29,12 @@ program
   .description('connects a adapter to a wifi network')
   .action(adapter)
 
-var eth0 = require('./lib/Eth0.js')
+var ethernet = require('./lib/ConfigureEthernet.js')
 
 program
-  .command('eth0 <ip> <mask> <gateway> <dns>')
+  .command('ethernet <ip> <mask> <gateway> <dns>')
   .description('configures rpi network interface to a static ip address')
-  .action(eth0)
+  .action(ethernet)
 
 var detectrpi = require('./lib/DetectRPI.js')
 
