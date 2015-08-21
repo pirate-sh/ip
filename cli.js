@@ -33,7 +33,7 @@ var wifi = require('./lib/ReconfigureWifi.js')
 
 program
   .command('wifi <ESSID> [password]')
-  .description('connects a adapter to a wifi network')
+  .description('connects to a wifi network')
   .action(wifi)
 
 var ethernet = require('./lib/ConfigureEthernet.js')
