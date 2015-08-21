@@ -26,8 +26,15 @@ var adapter = require('./lib/ReconfigureNetwork.js')
 
 program
   .command('adapter <wirelessSSID> <password> <wirelessSecurityType>')
-  .description('connects a adapter to a wifi network')
+  .description('[deprecated] connects a adapter to a wifi network')
   .action(adapter)
+
+var wifi = require('./lib/ReconfigureWifi.js')
+
+program
+  .command('wifi <ESSID> [password]')
+  .description('connects a adapter to a wifi network')
+  .action(wifi)
 
 var ethernet = require('./lib/ConfigureEthernet.js')
 
