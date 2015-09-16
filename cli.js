@@ -57,4 +57,14 @@ program
   .description('detect chipset of USB-Wifi dongle')
   .action(detectwifi)
 
+program
+  .command('*')
+  .description('temporary catch all')
+  .action(function(env){
+    console.log('ERROR "%s" does not exsist\npirateship --help', env);});
+
+if (process.argv.length == 2) {
+  process.argv.push('--help')
+}
+
 program.parse(process.argv);
