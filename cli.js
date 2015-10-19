@@ -45,7 +45,7 @@ program
 
 var expandfs = require('./lib/ExpandFS.js')
 
-programm
+program
   .command('expandfs')
   .description('expands the partition of the RPI image to the maximum of the SDcard')
   .action(expandfs)
