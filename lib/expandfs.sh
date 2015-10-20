@@ -41,7 +41,7 @@ w
 EOF
 
 # now set up an init.d script
-cat <<\EOF > /etc/init.d/resize2fs_once &&
+cat <<EOF > /etc/init.d/resize2fs_once &&
 #!/bin/sh
 ### BEGIN INIT INFO
 # Provides:          resize2fs_once
@@ -71,4 +71,4 @@ esac
 EOF
 
 chmod +x /etc/init.d/resize2fs_once &&
-update-rc.d resize2fs_once defaults &&
+update-rc.d resize2fs_once defaults
