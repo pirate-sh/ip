@@ -1,14 +1,30 @@
 #!/bin/sh
+get_init_sys() {
+  if command -v systemctl > /dev/null && systemctl | grep -q '\-\.mount'; then
+    SYSTEMD=1
+  elif [ -f /etc/init.d/cron ] && [ ! -h /etc/init.d/cron ]; then
+    SYSTEMD=0
+  else
+    echo "Unrecognised init system"
+    return 1
+  fi
+}
 
-if ! [ -h /dev/root ]; then
-  return 0
+get_init_sys
+if [ $SYSTEMD -eq 1 ]; then
+  ROOT_PART=$(mount | sed -n 's|^/dev/\(.*\) on / .*|\1|p')
+else
+  if ! [ -h /dev/root ]; then
+    return 0
+  fi
+  ROOT_PART=$(readlink /dev/root)
 fi
 
-ROOT_PART=$(readlink /dev/root)
-PART_NUM=${ROOT_PART#mmcblk0p}
 if [ "$PART_NUM" = "$ROOT_PART" ]; then
   return 0
 fi
+
+PART_NUM=${ROOT_PART#mmcblk0p}
 
 # NOTE: the NOOBS partition layout confuses parted. For now, let's only 
 # agree to work with a sufficiently simple partition layout
@@ -23,8 +39,9 @@ if [ "$LAST_PART_NUM" != "$PART_NUM" ]; then
 fi
 
 # Get the starting offset of the root partition
-PART_START=$(parted /dev/mmcblk0 -ms unit s p | grep "^${PART_NUM}" | cut -f 2 -d:)
+PART_START=$(parted /dev/mmcblk0 -ms unit s p | grep "^${PART_NUM}" | cut -f 2 -d: | sed 's/[^0-9]//g')
 [ "$PART_START" ] || return 1
+
 # Return value will likely be error for fdisk as it fails to reload the
 # partition table because the root fs is mounted
 fdisk /dev/mmcblk0 <<EOF
@@ -70,5 +87,6 @@ case "$1" in
 esac
 EOF
 
+#sudo resize2fs /dev/mmcblk0p2
 chmod +x /etc/init.d/resize2fs_once &&
 update-rc.d resize2fs_once defaults

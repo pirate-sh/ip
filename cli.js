@@ -36,6 +36,12 @@ program
   .description('connects to a wifi network')
   .action(wifi)
 
+var swifi = require('./lib/ConfigureWifiStatic.js')
+program
+  .command('swifi <ip> <mask> <gateway> <dns>')
+  .description('configures rpi wifi interface to a static ip address')
+  .action(swifi)
+
 var ethernet = require('./lib/ConfigureEthernet.js')
 
 program
@@ -57,18 +63,18 @@ program
   .description('detects the hardware version of a raspberry pi')
   .action(detectrpi)
 
-var detectwifi = require('./lib/DetectWifi.js')
+// var detectwifi = require('./lib/DetectWifi.js')
 
-program
-  .command('detectwifi')
-  .description('detect chipset of USB-Wifi dongle')
-  .action(detectwifi)
+// program
+//  .command('detectwifi')
+//  .description('detect chipset of USB-Wifi dongle')
+//  .action(detectwifi)
 
 program
   .command('*')
   .description('temporary catch all')
   .action(function(env){
-    console.log('ERROR "%s" does not exsist\npirateship --help', env);});
+    console.log('ERROR "%s" does not exist\npirateship --help', env);});
 
 if (process.argv.length == 2) {
   process.argv.push('--help')

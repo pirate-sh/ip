@@ -10,8 +10,8 @@
     "pirateship": "cli.js"
   },
   "dependencies": {
-        "commander": "^2.3.0",
-        "underscore": "^1.8.3"
+    "commander": "^2.9.0",
+    "underscore": "^1.8.3"
   },
   "repository": {
     "type": "git",
