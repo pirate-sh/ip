@@ -1,6 +1,6 @@
 {
-  "name": "pirate-sh",
-  "version": "0.1.13",
+  "name": "@pirateship/cli",
+  "version": "0.1.15",
   "description": "Thin command-line interface for Raspberry Pi low level configuration.",
   "main": "cli.js",
   "scripts": {
@@ -9,13 +9,16 @@
   "bin": {
     "pirateship": "cli.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "commander": "^2.9.0",
     "underscore": "^1.8.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pirate-sh/ip.git"
+    "url": "https://github.com/ole-vi/pirateship.git"
   },
   "keywords": [
     "raspberry pi ethernet wifi"
@@ -27,8 +30,8 @@
   },
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/pirate-sh/ip/issues",
+    "url": "https://github.com/ole-vi/pirateship/issues",
     "email": "stefan@unterhauser.name"
   },
-  "homepage": "https://github.com/pirate-sh/ip"
+  "homepage": "https://github.com/ole-vi/pirateship"
 }
