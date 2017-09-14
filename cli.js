@@ -36,11 +36,11 @@ program
   .description('connects to a wifi network')
   .action(wifi)
 
-var swifi = require('./lib/ConfigureWifiStatic.js')
+var staticwifi = require('./lib/ConfigureWifiStatic.js')
 program
-  .command('swifi <ip> <mask> <gateway> <dns>')
+  .command('staticwifi <ip> <mask> <gateway> <dns>')
   .description('configures rpi wifi interface to a static ip address')
-  .action(swifi)
+  .action(staticwifi)
 
 var ethernet = require('./lib/ConfigureEthernet.js')
 
@@ -48,6 +48,13 @@ program
   .command('ethernet <ip> <mask> <gateway> <dns>')
   .description('configures rpi network interface to a static ip address')
   .action(ethernet)
+
+var hotspot = require('./lib/ConfigureHotspot.js')
+
+program
+  .command('hotspot <ESSID> [password]')
+  .description('creates a mobile hotspot')
+  .action(hotspot)
 
 var expandfs = require('./lib/ExpandFS.js')
 
