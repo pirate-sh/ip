@@ -52,7 +52,7 @@ program
 var hotspot = require('./lib/ConfigureHotspot.js')
 
 program
-  .command('hotspot <ESSID> [password] [channel]')
+  .command('hotspot <ESSID> [password]')
   .description('creates a mobile hotspot')
   .action(hotspot)
 
