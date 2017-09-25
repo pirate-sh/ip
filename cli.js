@@ -70,6 +70,13 @@ program
   .description('detects the hardware version of a raspberry pi')
   .action(detectrpi)
 
+var version = require('./lib/Version.js')
+
+program
+  .command('version')
+  .description('returns the version of pirateship command')
+  .action(version)
+
 // var detectwifi = require('./lib/DetectWifi.js')
 
 // program
