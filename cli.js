@@ -84,6 +84,13 @@ program
 //  .description('detect chipset of USB-Wifi dongle')
 //  .action(detectwifi)
 
+
+var password = require('./lib/Password.js')
+program
+  .command('password <password>')
+  .description('change the password for `pi` user')
+  .action(password)
+
 program
   .command('*')
   .description('temporary catch all')
