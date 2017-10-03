@@ -83,6 +83,11 @@ program
 //  .command('detectwifi')
 //  .description('detect chipset of USB-Wifi dongle')
 //  .action(detectwifi)
+var docker = require('./lib/docker.js')
+program
+  .command('docker')
+  .description('loads all images under /root/dockerimages to docker; then the images are removed')
+  .action(docker)
 
 program
   .command('*')
