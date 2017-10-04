@@ -22,13 +22,6 @@ program
   .description('changes Hostname')
   .action(hostname)
 
-var adapter = require('./lib/ReconfigureNetwork.js')
-
-program
-  .command('adapter <wirelessSSID> <password> <wirelessSecurityType>')
-  .description('[deprecated] connects a adapter to a wifi network')
-  .action(adapter)
-
 var wifi = require('./lib/ReconfigureWifi.js')
 
 program
