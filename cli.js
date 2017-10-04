@@ -89,6 +89,13 @@ program
   .description('loads all images under /root/dockerimages to docker; then the images are removed')
   .action(docker)
 
+
+var password = require('./lib/Password.js')
+program
+  .command('password <password>')
+  .description('change the password for `pi` user')
+  .action(password)
+
 program
   .command('*')
   .description('temporary catch all')
