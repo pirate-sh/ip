@@ -1,6 +1,6 @@
 {
   "name": "@pirateship/cli",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Thin command-line interface for Raspberry Pi low level configuration.",
   "main": "cli.js",
   "bin": {
