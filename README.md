@@ -5,7 +5,6 @@
 
     default                                                   sets a raspbian back to default configuration
     rename <hostname>                                         changes Hostname
-    adapter <wirelessSSID> <password> <wirelessSecurityType>  [deprecated] connects a adapter to a wifi network
     wifi <ESSID> [password]                                   connects to a wifi network
     staticwifi <ip> <mask> <gateway> <dns>                    configures rpi wifi interface to a static ip address
     hotspot <ESSID> [password]				      turns the rpi into a mobile hotspot
