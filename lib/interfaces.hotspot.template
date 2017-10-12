@@ -1,14 +1,15 @@
 auto lo
-
 iface lo inet loopback
+
+auto eth0
 iface eth0 inet dhcp
 
 allow-hotplug wlan0
 iface wlan0 inet manual
-wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
-iface default inet dhcp
+  wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+  iface default inet dhcp
 
 auto uap0
-  iface uap0 inet static
+iface uap0 inet static
   address 192.168.2.1
   netmask 255.255.255.0
