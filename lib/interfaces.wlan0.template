@@ -1,6 +1,7 @@
 auto lo
-
 iface lo inet loopback
+
+auto eth0
 iface eth0 inet dhcp
 
 allow-hotplug wlan0
@@ -11,4 +12,3 @@ iface default inet static
   netmask NETMASK
   gateway GATEWAY
   dns-nameservers DNS
-
