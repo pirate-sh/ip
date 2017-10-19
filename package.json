@@ -1,6 +1,6 @@
 {
   "name": "@pirateship/cli",
-  "version": "0.2.7-sshkeyadd0",
+  "version": "0.2.7-sshkeyadd1",
   "description": "Thin command-line interface for Raspberry Pi low level configuration.",
   "main": "cli.js",
   "bin": {
