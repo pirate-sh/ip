@@ -1,6 +1,6 @@
 {
   "name": "@pirateship/cli",
-  "version": "0.2.7",
+  "version": "0.2.7-showlaxman",
   "description": "Thin command-line interface for Raspberry Pi low level configuration.",
   "main": "cli.js",
   "bin": {
@@ -24,9 +24,9 @@
     "raspberry pi ethernet wifi"
   ],
   "author": {
-    "name": "Stefan Unterhauser",
-    "email": "stefan@unterhauser.name",
-    "url": "http://pirate.sh/ip"
+    "name": "OLE virtual intern",
+    "email": "vi@ole.org",
+    "url": "https://open-learning-exchange.github.io"
   },
   "license": "AGPL-3.0",
   "bugs": {
