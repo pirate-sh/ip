@@ -1,4 +1,5 @@
 #!/bin/bash
 if [ "$IFACE" == uap0 ]; then
-  hostapd /etc/hostapd/hostapd.conf >1&
+  killall hostapd
+  hostapd /etc/hostapd/hostapd.conf &
 fi
