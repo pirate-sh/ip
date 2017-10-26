@@ -4,4 +4,4 @@
 # For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
 
 # Include files from /etc/network/interfaces.d:
-source-directory /etc/network/interfaces.d
+source /etc/network/interfaces.d/*
