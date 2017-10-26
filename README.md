@@ -22,6 +22,7 @@ Commands:
   version                                 returns the version of pirateship command
   docker                                  loads all images under /root/dockerimages to docker; then the images are removed
   password <password>                     change the password for `pi` user
+  sshkeyadd <public_key>                  add a public key to `pi` and `root` user's authorized_keys
   *                                       temporary catch all
 ```
 
