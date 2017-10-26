@@ -1,4 +1,4 @@
 #!/bin/bash
 if [ "$IFACE" == uap0 ]; then
-  hostapdstart >1&
+  hostapd /etc/hostapd/hostapd.conf >1&
 fi
