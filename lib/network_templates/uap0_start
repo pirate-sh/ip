@@ -1,0 +1,4 @@
+#!/bin/bash
+if [ "$IFACE" == uap0 ]; then
+  hostapdstart >1&
+fi
