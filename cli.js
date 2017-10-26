@@ -78,7 +78,7 @@ program
 //  .action(detectwifi)
 var docker = require('./lib/docker.js')
 program
-  .command('docker')
+  .command('docker [dockerimagezip]')
   .description('loads all images under /root/dockerimages to docker; then the images are removed')
   .action(docker)
 
