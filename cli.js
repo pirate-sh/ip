@@ -42,12 +42,14 @@ program
   .description('configures rpi network interface to a static ip address')
   .action(ethernet)
 
+/*
 var hotspot = require('./lib/ConfigureHotspot.js')
 
 program
   .command('hotspot <ESSID> [password]')
   .description('creates a mobile hotspot')
   .action(hotspot)
+*/
 
 var expandfs = require('./lib/ExpandFS.js')
 
