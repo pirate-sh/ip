@@ -1,6 +1,0 @@
-interface=uap0
-ssid=ESSID
-hw_mode=g
-channel=CHANNEL
-macaddr_acl=0
-ignore_broadcast_ssid=0
