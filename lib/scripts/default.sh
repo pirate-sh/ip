@@ -1,3 +1,2 @@
 #!/bin/bash
-data=$(pwd)
-echo $data
+echo $1
