@@ -1,0 +1,7 @@
+auto eth0
+iface eth0 inet static
+  address IPADDRESS
+  netmask NETMASK
+  gateway GATEWAY
+  dns-nameservers DNS
+
