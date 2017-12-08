@@ -54,11 +54,6 @@ var commands = [{
   //    action: './lib/detectwifi.js'
   //  },
   {
-    command: 'docker [dockerimagezip]',
-    description: 'loads all images under /root/dockerimages to docker; then the images are removed',
-    action: './lib/docker.js'
-  },
-  {
     command: 'password <password>',
     description: 'change the password for `pi` user',
     action: './lib/password.js'
@@ -67,8 +62,21 @@ var commands = [{
     command: 'sshkeyadd <public_key>',
     description: 'add a public key to `pi` and `root` user\'s authorized_keys',
     action: './lib/sshkeyadd.js'
+  },
+  {
+    command: 'balena [image]',
+    description: 'loads all images under /root/images to balena; then the images are removed',
+    action: './lib/balena.js'
+  },
+  {
+    command: 'docker [image]',
+    description: 'loads all images under /root/images to docker; then the images are removed',
+    action: './lib/docker.js'
   }
 ]
+commands.sort((a, b) => {
+  return a.command > b.command;
+});
 
 commands.forEach(command => {
   program
