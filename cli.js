@@ -72,6 +72,11 @@ var commands = [{
     command: 'docker [image]',
     description: 'loads all images under /root/images to docker; then the images are removed',
     action: './lib/docker.js'
+  },
+  {
+    command: 'container [docker|balena|both|none]',
+    description: 'enables (and start) the desired container',
+    action: './lib/container.js'
   }
 ]
 commands.sort((a, b) => {
