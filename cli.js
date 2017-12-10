@@ -79,8 +79,11 @@ var commands = [{
     action: './lib/container.js'
   }
 ]
+
 commands.sort((a, b) => {
-  return a.command > b.command;
+  a = a.command.split(" ")[0]
+  b = b.command.split(" ")[0]
+  return a.localeCompare(b);
 });
 
 commands.forEach(command => {
