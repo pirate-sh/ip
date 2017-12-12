@@ -15,7 +15,6 @@ Commands:
   container [docker|balena|both|none]     enables (and start) the desired container
   default                                 sets a raspbian back to default configuration
   detectrpi                               detects the hardware version of a raspberry pi
-  docker [image]                          loads all images under /root/images to docker; then the images are removed
   ethernet <ip> <mask> <gateway> <dns>    configures rpi network interface to a static ip address
   expandfs                                expands the partition of the RPI image to the maximum of the SDcard
   hotspot <ESSID> [password]              creates a mobile hotspot
