@@ -1,7 +1,7 @@
 # Usage
 
 ```
-Usage: pirateship [options] [command]
+Usage: cli [options] [command]
 
 
 Options:
