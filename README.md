@@ -12,15 +12,14 @@ Options:
 Commands:
 
   default                                 sets a raspbian back to default configuration
-  rename <hostname>                       changes Hostname
-  wifi <ESSID> [password]                 connects to a wifi network
+  rename <hostname>                       changes hostname
+  wifi <ESSID> [password]                 changes hostname
   staticwifi <ip> <mask> <gateway> <dns>  configures rpi wifi interface to a static ip address
   ethernet <ip> <mask> <gateway> <dns>    configures rpi network interface to a static ip address
   hotspot <ESSID> [password]              creates a mobile hotspot
   expandfs                                expands the partition of the RPI image to the maximum of the SDcard
   detectrpi                               detects the hardware version of a raspberry pi
   version                                 returns the version of pirateship command
-  docker                                  loads all images under /root/dockerimages to docker; then the images are removed
   password <password>                     change the password for `pi` user
   sshkeyadd <public_key>                  add a public key to `pi` and `root` user's authorized_keys
   *                                       temporary catch all
