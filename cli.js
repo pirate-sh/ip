@@ -54,11 +54,6 @@ var commands = [{
   //    action: './lib/detectwifi.js'
   //  },
   {
-    command: 'docker [dockerimagezip]',
-    description: 'loads all images under /root/dockerimages to docker; then the images are removed',
-    action: './lib/docker.js'
-  },
-  {
     command: 'password <password>',
     description: 'change the password for `pi` user',
     action: './lib/password.js'
