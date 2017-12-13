@@ -11,8 +11,7 @@ Options:
 
 Commands:
 
-  balena [image]                          loads all images under /root/images to balena; then the images are removed
-  container [docker|balena|both|none]     enables (and start) the desired container
+  container [docker|balena|none]          enables (and start) the desired container
   default                                 sets a raspbian back to default configuration
   detectrpi                               detects the hardware version of a raspberry pi
   ethernet <ip> <mask> <gateway> <dns>    configures rpi network interface to a static ip address

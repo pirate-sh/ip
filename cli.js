@@ -64,12 +64,7 @@ var commands = [{
     action: './lib/sshkeyadd.js'
   },
   {
-    command: 'balena [image]',
-    description: 'loads all images under /root/images to balena; then the images are removed',
-    action: './lib/balena.js'
-  },
-  {
-    command: 'container [docker|balena|both|none]',
+    command: 'container [docker|balena|none]',
     description: 'enables (and start) the desired container',
     action: './lib/container.js'
   }
