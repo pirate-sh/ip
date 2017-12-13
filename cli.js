@@ -62,8 +62,19 @@ var commands = [{
     command: 'sshkeyadd <public_key>',
     description: 'add a public key to `pi` and `root` user\'s authorized_keys',
     action: './lib/sshkeyadd.js'
+  },
+  {
+    command: 'container [docker|balena|none]',
+    description: 'enables (and start) the desired container',
+    action: './lib/container.js'
   }
 ]
+
+commands.sort((a, b) => {
+  a = a.command.split(" ")[0]
+  b = b.command.split(" ")[0]
+  return a.localeCompare(b);
+});
 
 commands.forEach(command => {
   program
