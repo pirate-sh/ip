@@ -1,6 +1,7 @@
 #!/bin/bash
 
-service bluetooth start || true
+systemctl daemon-reload
+service bluetooth restart || true
 bluetoothctl <<EOF
 power on
 discoverable on

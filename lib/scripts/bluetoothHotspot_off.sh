@@ -1,4 +1,5 @@
 #!/bin/bash
 
 service rpibluetooth stop || true
-service bluetooth stop || true
+systemctl daemon-reload
+service bluetooth restart || true
