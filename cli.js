@@ -67,6 +67,11 @@ var commands = [{
     command: 'container [docker|balena|none]',
     description: 'enables (and start) the desired container',
     action: './lib/container.js'
+  },
+  {
+    command: 'bluetooth [on|off]',
+    description: 'switches between bluetooth hotspot mode / regular bluetooth and starts the service',
+    action: './lib/bluetooth.js'
   }
 ]
 
