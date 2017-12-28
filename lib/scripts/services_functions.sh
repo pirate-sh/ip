@@ -7,6 +7,11 @@ function start_service() {
   fi
 }
 
+function restart_service() {
+  systemctl stop $1
+  systemctl start $1
+}
+
 function stop_service() {
   if [ "`systemctl is-active $1`" == "active" ]
   then
