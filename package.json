@@ -1,6 +1,6 @@
 {
   "name": "@pirateship/cli",
-  "version": "0.3.3-bluetooth1",
+  "version": "0.3.3-bluetooth2",
   "description": "Thin command-line interface for Raspberry Pi low level configuration.",
   "main": "cli.js",
   "bin": {

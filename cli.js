@@ -69,7 +69,7 @@ var commands = [{
     action: './lib/container.js'
   },
   {
-    command: 'bluetooth [on|off]',
+    command: 'bluetooth <status>',
     description: 'switches between bluetooth hotspot mode / regular bluetooth and starts the service',
     action: './lib/bluetooth.js'
   }

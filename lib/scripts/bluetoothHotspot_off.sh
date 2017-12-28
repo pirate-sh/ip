@@ -1,5 +1,8 @@
 #!/bin/bash
 
-service rpibluetooth stop || true
-systemctl daemon-reload
-service bluetooth restart || true
+source_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+source $source_dir/services_functions.sh
+
+disable_service rpibluetooth
+stop_service rpibluetooth
+restart_service bluetooth
