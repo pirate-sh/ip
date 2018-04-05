@@ -15,7 +15,7 @@ var commands = [{
   },
   {
     command: 'wifi <ESSID> [password]',
-    description: 'changes hostname',
+    description: 'connects to a wifi network',
     action: './lib/wifi.js'
   },
   {
@@ -72,6 +72,11 @@ var commands = [{
     command: 'bluetooth <on|off>',
     description: 'switches between bluetooth hotspot mode / regular bluetooth and starts the service',
     action: './lib/bluetooth.js'
+  },
+  {
+    command: 'wificountry <country>',
+    description: 'changes the wifi country',
+    action: './lib/wificountry.js'
   }
 ]
 
