@@ -11,3 +11,5 @@ iw reg set "$COUNTRY"
 if [ -f /run/wifi-country-unset ] && hash rfkill 2> /dev/null; then
     rfkill unblock wifi
 fi
+
+echo $COUNTRY > /etc/rpi-wifi-country
