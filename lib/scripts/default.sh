@@ -6,6 +6,7 @@ cp "$1/templates/network/dnsmasq/default" "/etc/dnsmasq.conf"
 cp "$1/templates/network/dhcpcd/default" "/etc/dhcpcd.conf"
 rm -rf /etc/hostapd.conf
 rm -rf /etc/network/interfaces.d/*
+rm -rf /etc/rpi-wifi-country
 pirateship rename raspberrypi
 systemctl disable hostapd || true
 systemctl disable dnsmasq || true

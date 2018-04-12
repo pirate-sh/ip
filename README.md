@@ -6,8 +6,7 @@ Usage: pirateship [options] [command]
 
 Options:
 
-  -h, --help  output usage information
-
+  -h, --help                              output usage information
 
 Commands:
 
@@ -23,7 +22,8 @@ Commands:
   sshkeyadd <public_key>                  add a public key to `pi` and `root` user's authorized_keys
   staticwifi <ip> <mask> <gateway> <dns>  configures rpi wifi interface to a static ip address
   version                                 returns the version of pirateship command
-  wifi <ESSID> [password]                 changes hostname
+  wifi <ESSID> [password]                 connects to a wifi network
+  wificountry <country>                   changes the wifi country
   *                                       temporary catch all
 ```
 
