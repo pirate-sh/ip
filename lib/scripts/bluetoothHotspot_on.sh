@@ -7,11 +7,4 @@ enable_service rpibluetooth
 restart_service bluetooth
 restart_service rpibluetooth
 
-sleep 3 # wait 3 seconds for bluetooth to be completely up
-
-# put rpi bluetooth on discoverable mode
-bluetoothctl <<EOF
-power on
-discoverable on
-pairable on
-EOF
+sleep 5 # wait 5 seconds for bluetooth to be completely up
