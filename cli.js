@@ -77,6 +77,11 @@ var commands = [{
     command: 'wificountry <country>',
     description: 'changes the wifi country',
     action: './lib/wificountry.js'
+  },
+  {
+    command: 'checksignal',
+    description:"checks the RSSI of the RPi's wifi connection",
+    action: './lib/checksignal.js'
   }
 ]
 
